@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="todo.css"/>
+</head>
+<body>
+    
+    <div class="container" id="show">
+        <div class="pop-up-background" id="pop_up_background">
+            <div class="pop-up-yes-no-window" id="pop_up_yes_no_window">
+                <div class="form-group mt-3">
+                    <i class="fas fa-trash"></i>
+                </div>
+                
+                <div class="form-group">
+                    <p id="pop_up_description" ><i>Removing this will remove the entire task in it?</i></p>
+
+                </div>
+                <hr class="divider bg-dark"></hr>
+                <div class="form-group btn-yes-no-div">
+                    <a class="btn delete" id="yes" >Delete</a> 
+                    <a class="btn no" id="no" >No</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="pop-up-frame" id="pop_up_frame">
+            <div class="pop-up-window" id="pop_up_window">
+                <div class="form-group">
+                    <h5>New list</h5>
+                    <p>Type your todo title!</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="title_name" placeholder="Title Name"/>
+                </div>
+                <div class="form-group btn-div">
+                    <a class="btn" id="create" >Create</a> 
+                    <a class="btn" id="cancel_create" >Cancel</a>
+                </div>
+                
+            </div>
+        </div>
+        
+       <div class="row">
+        <div class="sidebar">
+                 <div class="col-12 title">
+                    <i class="fas fa-clipboard-list " id="title_logo"></i><h2 class="text-center mt-4">Todo</h2>
+                 </div>
+     
+                 <div class="col-12 mt-4 static">
+                    
+                    <div id="important" ><span><i class="fas fa-star"></i> Important</span><span class="pr-3" id="total_important_task"></span></div>
+                     <div id="completed"><span><i class="fas fa-check-circle"> </i> Completed</span><span class="pr-3" id="total_completed_task"></span></div>
+                     
+                 </div>
+                 
+            <hr class="divider mt-4 mb-4 m-3 bg-dark"></hr>
+            <!-- list or grid buttons -->
+                <div class="list-grid-div">
+                    <span class="back-movement-layer" id="back_movement_layer"></span>
+                    <i class="fas fa-th" id="grid_button" title="grid"></i>
+                    <i class="fas fa-th-list" id="list_button" title="list"></i>
+                </div>
+               <div class="titles_heading_div">  
+                     
+                       <div class="col-12 dynamic" id="title_list_show"> </div>
+                     
+                      <div class="col-12 adddiv" id="add_new_list">
+                       
+                         <div><i class="fas fa-plus"></i> New list</div>
+                         
+                     </div>
+                </div>
+        </div>
+      </div>
+
+
+       <div>
+        <div class="first-row">
+            <div>
+                <div id="back"> 
+                    <hr class="divider bg-light menu-hamburger"></hr>
+                </div>
+            </div>
+            <div class="col-7">
+                <h3 id="title_heading">heading</h3>
+            </div>
+            <!-- <div class="col-12"> -->
+               <div class="col-3 pl-0">
+                   <p class="text-right mt-2" >Total task</p>
+               </div>
+               <div class="col-2 pl-0">
+                   <p class="text-left mt-2" id="total_task"></p>
+               </div>
+           <!-- </div> -->
+        
+        </div>
+
+
+        <!-- dispalying data for important,completed, and new tasks -->
+        <div class="row">
+              <div class="dynamic-data-list-div">
+                  <div class="col-12 dynamic-list" id="task_list_show">
+                       
+                  </div>
+                  
+                  <div class="col-12 completed-dynamic-list" >
+                    <details id="details">
+                        <summary>COMPLETED <span id="total_completed"></span></summary>
+                        <div id="completed_task_list_show"></div>
+                    </details>
+                  </div>
+              </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12" id="add_task">
+                <div class="addtask">
+                    <div class="first">
+                        <i class="fas fa-plus" id="add_a_task"></i>
+                    </div>
+                    <div class="second">
+                        <input type="text" id="task_input"  placeholder="Add a task"/>
+                    </div>
+                </div>    
+            </div>
+        </div>
+       </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="todo.js"></script>
+</body>
+</html>
+
